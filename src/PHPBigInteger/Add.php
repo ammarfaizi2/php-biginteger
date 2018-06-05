@@ -25,20 +25,18 @@ class Add implements PHPBigIntegerContract
      */
     public function __construct($num1, $num2)
     {
-        
-        $num1 = "".$num1; $num2 = "".$num2;
-        $c = strlen($num1); $d = strlen($num2);
+        $num1 = strrev("".$num1); $num2 = strrev("".$num2);
 
         /**
          * Fix the different string length.
          */
+        $c = strlen($num1); $d = strlen($num2);
         if ($c > $d) {
-            $num2 = strrev($num2).str_repeat("0", $c-$d);
-            $num1 = strrev($num1);
-        }
-        if ($c < $d) {
-            $num1 = strrev($num1).str_repeat("0", $d-$c);
-            $num2 = strrev($num2);
+            $num2 = $num2.str_repeat("0", $c-$d);
+            $num1 = $num1;
+        } elseif ($c < $d) {
+            $num1 = $num1.str_repeat("0", $d-$c);
+            $num2 = $num2;
         }
 
         $r = [];
@@ -55,7 +53,7 @@ class Add implements PHPBigIntegerContract
             }
         }
 
-        $this->num = implode("", array_reverse($r));
+        $this->num = ltrim(implode("", array_reverse($r)), "0");
     }
 
     /**
