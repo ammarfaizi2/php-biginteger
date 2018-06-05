@@ -44,7 +44,7 @@ class Add implements PHPBigIntegerContract
         $num1 = str_split($num1);
         
         foreach ($num1 as $k => $v) {
-            $r[$k] = (string) ($v + $num2[$k] + $carry);
+            $r[$k] = "".($v + $num2[$k] + $carry);
             if ($r[$k] > 9 && isset($num1[$k+1])) {
                 $carry = $r[$k][0];
                 $r[$k] = $r[$k][1];
