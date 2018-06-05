@@ -1,6 +1,16 @@
 {
     "name": "ammarfaizi2/php-biginteger",
     "description": "Operate Big Integer in PHP.",
+    "keywords": [
+        "php",
+        "big-integer",
+        "php-biginteger",
+        "countable",
+        "integer",
+        "big-integer",
+        "math",
+        "mathematics"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
