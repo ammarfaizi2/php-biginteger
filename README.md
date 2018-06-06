@@ -1,6 +1,6 @@
 
 # PHP Big Integer
-- Operate big integer value in PHP.
+- Calculate big integer value in PHP.
 
 # Join Our Group
 - <a href="https://t.me/KodingTeh">@KodingTeh</a>
